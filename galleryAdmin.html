@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+   <link rel="Stylesheet" type="text/css" href="styles.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="insight-app-sec-validation" content="8b51eee9-0529-4aed-8205-61337fbb8309">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        
+    <script type="text/javascript" src="UploadImages.js"></script>
+</head>
+<body>
+
+    <nav clas="navbar">
+        <div class="tab">
+            <img class="header_image" src="images/ZemosoTech.png" height="85" width="150" alt="Zemoso">
+            <button class="tablink" onclick="openPage('galleryAdmin', this)"><a href="galleryAdmin.html"><h2>Gallery Admin</h2></a></button> 
+            <button class="tablink" onclick="openPage('gallery', this)"><a href="gallery.html"><h2>My Gallery</a></h2></button>
+            <button ><a href="contact.html"><h2>Contact Me</h2></a></button>
+            <button ><a href="aboutme.html"><h2>About Me</h2></a></button>
+            <button class="tablink" onclick="openPage('home', this)" id="defaultOpen"><a href="index.html"><h2>Home</a></h2></button> 
+            
+        </div>
+    </nav>
+    <div>
+    <h2 class="gallery_admin">Gallery Admin</h2>
+</div>
+
+<div id="galleryAdmin" class="content">
+      
+        <button class="add" id="addbutton"  " type="button" onclick="openForm('add')">Add A Picture</button> 
+        <div id="data" class="container"></div>
+        <div id="formdiv" style="display: none;">
+            <button class="add" type="button" style="display: none;" onclick="openForm('add')">Add A Picture</button>    
+            <br>
+            <h1 id="addedit"></h1>
+            <div class="formcontainer">
+            <form name="myImageform" onsubmit="return validateImage()" >
+                <input type="text" style="display: none;" id="index" name="index" value="-1">
+                <label for="Image-URL">Image URL</label><br>
+                <input type="text" id=Image-URL name="Image-URL" value="" required ><br>
+                <label for="Name">Name</label><br>
+                <input type="text" id=Name name="Name" value="" required><br>
+                <label for="Information">Information</label><br>
+                <input type="text" id=Information name="Information" value="" required><br>
+                <label for="Date">Date</label><br>
+                <input type="date" id="Date" name="Date" value="" required><br><br>
+                <input type="submit" id="submit" >
+                <input type="reset" style="display: none;" id="reset" value="Reset Form">
+            </form>
+        </div>
+</div>
+</div>
+</body>
+</html>
